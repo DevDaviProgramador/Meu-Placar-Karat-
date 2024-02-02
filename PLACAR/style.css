@@ -1,0 +1,168 @@
+#botaoResetarLuta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+}
+
+#placar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 670px;
+    width: 1000px;
+}
+
+.lutador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes-container, .faltas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h1, h2 {
+    font-size: 60px;
+    margin: 10px;
+}
+
+p {
+    font-size: 70px;
+    margin: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.botaoAka {
+    font-weight: bold;
+}
+
+.botaopreto {
+    color: black;
+    font-weight: bold;
+}
+
+.maior {
+    font-size: 70px;
+}
+
+.container-pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.span {
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+#cronometro {
+    text-align: center;
+}
+
+#lutaInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#pontosLutador1, #pontosLutador2, #faltasLutador1, #faltasLutador2 {
+    border: 2px solid black; 
+    padding: 10px; 
+    width: 50px; 
+    height: 50px;
+    text-align: center;
+    line-height: 50px; 
+    display: inline-block; 
+}
+
+#container {
+    width: 1200px;
+    position: relative; 
+}
+
+#metadeTelaVermelha {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: red;
+    z-index: -1; 
+}
+
+#imagemAcimaCronometro {
+    display: block;
+    margin: auto; 
+    max-width: 300px;
+    height: auto; 
+}
+
+#dojoLutador1, #nomeLutador1, #dojoLutador2, #nomeLutador2 {
+    margin-bottom: 10px;
+    width: 300px; 
+    height: 40px; 
+    padding: 5px; 
+    font-size: 16px;
+}
+
+#mensagemVencedor {
+    animation: piscar 1s linear infinite;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: #30b519;
+}
+
+@keyframes piscarVermelho {
+    0%, 100% { color: initial; }
+    50% { color: red; }
+}
+
+.piscar-vermelho {
+    animation: piscarVermelho 1s infinite;
+}

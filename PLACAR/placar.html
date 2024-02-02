@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placar de Luta</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="metadeTelaVermelha"></div>
+    <button onclick="resetarLutaCompleta()" class="botaopreto" id="botaoResetarLuta">Resetar Luta</button>
+    <div id="container" class="container-pai">
+        <div id="metadeVermelha"></div>
+        <div class="conteudo">
+            <div id="placar">
+                <div id="lutador1" class="lutador">
+                    <input type="text" id="nomeLutador1" placeholder="Nome Lutador Aka">
+                    <input type="text" id="dojoLutador1" placeholder="Dojo Lutador Aka">
+                    <h2 id="nomeDisplayLutador1" class="Aka">Aka</h2>
+                    <p id="dojoDisplayLutador1"></p>
+                    <p class="maior" id="pontosLutador1">0</p>
+                    <div class="botoes-container">
+                        <button onclick="adicionarPonto('lutador1', 1)" class="botaoAka">Wazari Aka</button>
+                        <button onclick="adicionarPonto('lutador1', 2)" class="botaoAka">Ippon Aka</button>
+                        <button onclick="registrarFalta('lutador1')" class="botaoAka">Falta Aka</button>
+                    </div>
+                    <div class="faltas-container">
+                        <span class="span">Faltas</span>
+                        <p id="faltasLutador1">0</p>
+                    </div>
+                </div>
+                <div id="lutaInfo">
+                    <img src="C:/Users/Davi/Worspace/PLACAR/imagem/AssosiaçãoJiin.jpeg" alt="Descrição da imagem" id="imagemAcimaCronometro">
+                    <p class="maior" id="cronometro">02:00</p>
+                    <p id="mensagemVencedor"></p>
+                    <button onclick="iniciarOuPausarLuta()" class="botaopreto" id="botaoIniciarPausarLuta">Iniciar Luta</button>
+                    <button onclick="desfazerUltimaAcao()" class="botaopreto" id="botaoDesfazer">Desfazer</button>
+                </div>
+                <div id="lutador2" class="lutador">
+                    <input type="text" id="nomeLutador2" placeholder="Nome Lutador Shiro">
+                    <input type="text" id="dojoLutador2" placeholder="Dojo Lutador Shiro">
+                    <h2 id="nomeDisplayLutador2" class="Shiro">Shiro</h2>
+                    <p id="dojoDisplayLutador2"></p>
+                    <p class="maior" id="pontosLutador2">0</p>
+                    <div class="botoes-container">
+                        <button onclick="adicionarPonto('lutador2', 1)">Wazari Shiro</button>
+                        <button onclick="adicionarPonto('lutador2', 2)">Ippon Shiro</button>
+                        <button onclick="registrarFalta('lutador2')">Falta Shiro</button>
+                    </div>
+                    <div class="faltas-container">
+                        <span class="span">Faltas</span>
+                        <p id="faltasLutador2">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioFimLuta" src="C:/Users/Davi/Worspace/PLACAR/audio/AudioFimDaLuta.mp3"></audio>
+    <audio id="audio30Segundos" src="C:/Users/Davi/Worspace/PLACAR/audio/Audio30Segundos.mp3"></audio>    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
