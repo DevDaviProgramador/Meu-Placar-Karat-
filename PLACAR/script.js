@@ -119,7 +119,7 @@ function iniciarOuPausarLuta() {
 
     if (!lutaEmAndamento) {
         resetarPontos();
-        tempoRestante = 120; // Reinicia o tempo
+        tempoRestante = 120;
         lutaEmAndamento = true;
         iniciarCronometro();
         botao.innerText = 'Pausar Luta';
@@ -168,7 +168,7 @@ function resetarPontos() {
     document.getElementById('pontosLutador1').innerText = '0';
     document.getElementById('pontosLutador2').innerText = '0';
     document.getElementById('mensagemVencedor').innerText = '';
-    tempoRestante = 120;
+    tempoRestante = 120; 
     document.getElementById('cronometro').innerText = formatarTempo(tempoRestante);
     resetarFaltas();
 }
@@ -211,26 +211,16 @@ function atualizarCronometro() {
 
     if (tempoRestante === 30) {
         document.getElementById('audio30Segundos').play();
+        document.getElementById('cronometro').classList.add('piscar-vermelho');
     }
 
     if (tempoRestante <= 0) {
         document.getElementById('audioFimLuta').play();
         encerrarLuta();
+        document.getElementById('cronometro').classList.remove('piscar-vermelho');
     }
 }
 
-function atualizarCronometro() {
-    tempoRestante--;
-    document.getElementById('cronometro').innerText = formatarTempo(tempoRestante);
-
-    if (tempoRestante <= 30) {
-        document.getElementById('cronometro').classList.add('piscar-vermelho');
-    }
-
-    if (tempoRestante <= 0) {
-        encerrarLuta();
-    }
-}
 
 function encerrarLuta() {
     clearInterval(intervaloCronometro);
